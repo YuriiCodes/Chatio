@@ -1,0 +1,19 @@
+{
+  "name": "chatio2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "serve": "nodemon server",
+    "start": "node server"
+  },
+  "author": "Yurii Pidlisnyi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5",
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.0"
+  }
+}

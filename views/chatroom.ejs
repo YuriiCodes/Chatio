@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs');%>
+<body>
+    <div class="container bg-light border rounded pb-3">
+        <h1 class="display1 text-center">Chatio v1.0 </h1>
+        <ol class="list-group w-50" id ="chatWindow">
+            <%data.forEach( (message) => {%>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold"><%= message.name%></div>
+                  <%= message.message%>
+                </div>
+              </li>
+              <%});%>
+          </ol>
+
+          <br>
+          <!-- text input form -->
+          <form action="/", method="post", id="msgForm">
+            <div class="mb-3">
+              <div class="mb-3">
+                <label for="name" class="form-label">Your name</label>
+                <input type="text" class="form-control" id="name">
+    
+              </div>
+
+                <label for="exampleFormControlTextarea1" class="form-label">Please, enter your message below 👇</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+    </div>
+    <script src="static/javascripts/main.js"></script>
+    <script>
+
+      
+    </script>
+    
+</body>
+</html>
