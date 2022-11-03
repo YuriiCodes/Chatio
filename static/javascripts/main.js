@@ -18,14 +18,9 @@ const addMessage = function(name, text){
             ${text}
             </div>`
         chatWindow.appendChild(li);
-        
+
 }
-const checkValidity = function(text){
-    if(text.includes("<" || text.includes(">"))){
-        return false;
-    }
-    return true
-}
+
 form.addEventListener("submit", e => {
     e.preventDefault();
     const name = nameInput.value.replace("<", "").replace(">", "")
